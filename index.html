@@ -17,11 +17,29 @@
     }
 
     h1 {
-        color: white;
+        font-size: 4rem;
         text-align: center;
         padding: 2rem 0;
-        font-family: 'Courier New', Courier, monospace;
+        font-family: sans-serif;
+        background-image: linear-gradient(to right,red,yellow,pink,#00ffff);
+        background-size: 200%;
+        background-position: 100% auto;
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+        animation: change 3s infinite linear;
     }
+
+    @keyframes change {
+        from{
+            background-position: 0;
+        }
+
+        to{
+            background-position: 200%;
+        }
+        
+    }
+
 
     .image-container {
         display: flex;
@@ -42,7 +60,7 @@
 
     @media screen and (max-width:468px) {
         h1 {
-            font-size: 1.5rem;
+            font-size: 2rem;
             letter-spacing: 1px;
             font-weight: bold;
             text-decoration: double;
